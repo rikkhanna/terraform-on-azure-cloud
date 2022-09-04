@@ -14,6 +14,7 @@ steps:
     image: hashicorp/terraform:0.13.0
     title: Initializing Terraform
     stage: apply
+    working_directory: ${{main_clone}}/03-Terraform-Command-Basics
     commands:
       - terraform init
   plan:
