@@ -61,3 +61,21 @@ resource "azurerm_virtual_network" "myvnet" { # Resource BLOCK
 7. Data Sources Block
 8. Modules Block
 
+## Step-05: Terraform Core Commands
+```t
+# Terraform Initialize
+terraform init
+
+# Terraform Validate
+terraform validate
+
+# Terraform Plan to Verify what it is going to create / update / destroy
+terraform plan -var="business_unit=it" -var="environment_name=dev" -out plan.tfstate
+
+# Terraform Apply to Create Resources
+terraform apply "plan.tfstate"
+
+terraform destroy
+rm -rf .terraform*
+rm -rf terraform.tfstate*
+```
