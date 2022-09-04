@@ -65,7 +65,7 @@ terraform init
 terraform validate
 
 # Terraform Plan to Verify what it is going to create / update / destroy
-terraform plan
+terraform plan -out azurerg.tfstate
 
 # Terraform Apply to Create Resources
 terraform apply 
