@@ -21,12 +21,14 @@ steps:
     image: hashicorp/terraform:1.0.0
     title: Outputting Terraform plan
     stage: apply
+    working_directory: ${{main_clone}}/03-Terraform-Command-Basics
     commands:
       - terraform plan
   apply:
     image: hashicorp/terraform:1.0.0
     title: Applying Terraform
     stage: apply
+    working_directory: ${{main_clone}}/03-Terraform-Command-Basics
     commands:
       - terraform apply -auto-approve
     when:
