@@ -11,20 +11,20 @@ steps:
     revision: "${{CF_BRANCH}}"
     stage: prepare
   init:
-    image: hashicorp/terraform:0.13.0
+    image: hashicorp/terraform:1.0.0
     title: Initializing Terraform
     stage: apply
     working_directory: ${{main_clone}}/03-Terraform-Command-Basics
     commands:
       - terraform init
   plan:
-    image: hashicorp/terraform:0.13.0
+    image: hashicorp/terraform:1.0.0
     title: Outputting Terraform plan
     stage: apply
     commands:
       - terraform plan
   apply:
-    image: hashicorp/terraform:0.13.0
+    image: hashicorp/terraform:1.0.0
     title: Applying Terraform
     stage: apply
     commands:
