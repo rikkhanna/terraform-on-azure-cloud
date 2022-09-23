@@ -69,7 +69,7 @@ data "azurerm_resource_group" "example" {
 output "id" {
   value = data.azurerm_resource_group.example.id
 }
-#####################################################################
+####################################################################
 # Block-8: Modules Block
 # Azure Virtual Network Block using Terraform Modules (https://registry.terraform.io/modules/Azure/network/azurerm/latest)
 module "network" {
