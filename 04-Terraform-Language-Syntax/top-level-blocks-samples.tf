@@ -52,14 +52,14 @@ output "azure_resourcegroup_id" {
   value = azurerm_resource_group.myrg.id 
 }
 #####################################################################
-# Block-6: Local Values Block
-# Define Local Value with Business Unit and Environment Name combined
-variable "business_unit" {}
-variable "environment_name" {}
+# # Block-6: Local Values Block
+# # Define Local Value with Business Unit and Environment Name combined
+# variable "business_unit" {}
+# variable "environment_name" {}
 
-locals {
-  name = "${var.business_unit}-${var.environment_name}"
-}
+# locals {
+#   name = "${var.business_unit}-${var.environment_name}"
+# }
 #####################################################################
 # Block-7: Data sources Block
 # Use this data source to access information about an existing Resource Group.
