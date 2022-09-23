@@ -29,7 +29,7 @@ resource "azurerm_resource_group" "myrg" {
   name = "myrg-1"
   location = var.azure_region 
 }
-# Create Virtual Network
+#Create Virtual Network
 resource "azurerm_virtual_network" "myvnet" {
   name                = "myvnet-1"
   address_space       = ["10.0.0.0/16"]
