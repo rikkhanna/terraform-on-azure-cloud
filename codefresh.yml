@@ -14,21 +14,21 @@ steps:
     image: hashicorp/terraform:1.0.0
     title: Initializing Terraform
     stage: apply
-    working_directory: ${{main_clone}}/03-Terraform-Command-Basics
+    working_directory: ${{main_clone}}/${{APPLICATION}}
     commands:
       - terraform init
   plan:
     image: hashicorp/terraform:1.0.0
     title: Outputting Terraform plan
     stage: apply
-    working_directory: ${{main_clone}}/03-Terraform-Command-Basics
+    working_directory: ${{main_clone}}/${{APPLICATION}}
     commands:
       - terraform plan
   apply:
     image: hashicorp/terraform:1.0.0
     title: Applying Terraform
     stage: apply
-    working_directory: ${{main_clone}}/03-Terraform-Command-Basics
+    working_directory: ${{main_clone}}/${{APPLICATION}}
     commands:
       - terraform apply -auto-approve
     when:
